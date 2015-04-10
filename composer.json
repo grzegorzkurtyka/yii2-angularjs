@@ -19,11 +19,6 @@
       "role": "Developer"
     }
   ],
-  "support": {
-    "email": "support@tesjin.ru",
-    "issues": "https://github.com/grzegorzkurtyka/yii2-angularjs/issues",
-    "source": "https://github.com/grzegorzkurtyka/yii2-angularjs"
-  },
   "require": {
     "php": ">=5.3.0",
     "bower-asset/angular": "~1.0"
