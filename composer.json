@@ -1,5 +1,5 @@
 {
-  "name": "tesjin/yii2-angularjs",
+  "name": "grzegorzkurtyka/yii2-angularjs",
   "type": "library",
   "description": "The assets bundle of Angular.js for Yii2. Managed by bower",
   "keywords": ["angular", "angularjs", "angular.js", "yii", "yii2"],
