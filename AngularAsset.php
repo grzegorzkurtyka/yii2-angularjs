@@ -8,6 +8,7 @@
 
 namespace yii\angularjs;
 
+use yii;
 use yii\web\AssetBundle;
 
 /**
@@ -22,25 +23,45 @@ class AngularAsset extends AssetBundle
 
     public $jsSources = [
         'angular',
-        'angular-animate',
-        'angular-cookies',
-        'angular-loader',
-        'angular-mocks',
         'angular-resource',
-        'angular-route',
-        'angular-sanitize',
-        'angular-scenario',
-        'angular-touch',
+        'angular-ui-router',
+    ];
+
+    public $vendorFiles = [
+        '@vendor/bower/angular/angular',
+        '@vendor/bower/angular-resource/angular-resource',
+        '@vendor/bower/angular-ui-router/release/angular-ui-router',
     ];
 
     /**
-     * Initializes the bundle.
-     * Depending on debug settings enables non-minimzed versions of the files
+     * Initalize
      */
-    public function init() {
-        parent::init();
-        $this->js = array_map(function($js) {
+    public function init()
+    {
+        $this->publishOptions['beforeCopy'] = [$this, 'beforeCopyAssets'];
+        $this->js = array_map(function ($js) {
             return YII_DEBUG ? $js . '.js' : $js . '.min.js';
         }, $this->jsSources);
+        parent::init();
+    }
+
+    /**
+     * Copy defined files from other vendors
+     *
+     * @return bool
+     */
+    public function beforeCopyAssets()
+    {
+        $destDir = Yii::getAlias($this->sourcePath);
+        $exts = ['.js', '.min.js'];
+
+        foreach ($this->vendorFiles as $sourcePath) {
+            foreach ($exts as $ext) {
+                $srcPath = Yii::getAlias($sourcePath . $exts);
+                $destPath = $destDir . DIRECTORY_SEPARATOR . basename($srcPath);
+                copy($srcPath, $destPath);
+            }
+        }
+        return true;
     }
 }
