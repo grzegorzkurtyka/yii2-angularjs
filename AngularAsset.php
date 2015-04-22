@@ -14,6 +14,19 @@ use yii\web\AssetBundle;
 /**
  * This asset bundle provides the [angular javascript library](https://angularjs.org/)
  *
+ * Extra bundles (optional) can be configured via AssetManager:
+ *
+ * ```php
+ * 'assetManager' => [
+ *      'bundles' => [
+ *          'yii\angularjs\AngularAsset' => [
+ *              'extraBundles' => ['ui-router'],
+ *          ]
+ *     ],
+ *  ],
+ * ```
+ *
+ *
  * @author Vladislav Orlov <orlov@tesjin.ru>
  * @author Grzegorz Kurtyka <grzegorz.kurtyka@schibsted.pl>
  */
@@ -24,13 +37,15 @@ class AngularAsset extends AssetBundle
     public $jsSources = [
         'angular',
         'angular-resource',
-        'angular-ui-router',
     ];
+
+    public $extraBundles = [];
 
     public $vendorFiles = [
         '@vendor/bower/angular/angular',
         '@vendor/bower/angular-resource/angular-resource',
         '@vendor/bower/angular-ui-router/release/angular-ui-router',
+        '@vendor/bower/angular-gettext/dist',
     ];
 
     /**
@@ -38,6 +53,10 @@ class AngularAsset extends AssetBundle
      */
     public function init()
     {
+        foreach ($this->extraBundles as $extraBundle) {
+            $this->jsSources[] = 'angular-' . $extraBundle;
+        }
+
         $this->publishOptions['beforeCopy'] = [$this, 'beforeCopyAssets'];
         $this->js = array_map(function ($js) {
             return YII_DEBUG ? $js . '.js' : $js . '.min.js';
