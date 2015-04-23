@@ -76,7 +76,7 @@ class AngularAsset extends AssetBundle
 
         foreach ($this->vendorFiles as $sourcePath) {
             foreach ($exts as $ext) {
-                $srcPath = Yii::getAlias($sourcePath . $exts);
+                $srcPath = Yii::getAlias($sourcePath . $ext);
                 $destPath = $destDir . DIRECTORY_SEPARATOR . basename($srcPath);
                 copy($srcPath, $destPath);
             }
