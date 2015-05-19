@@ -45,7 +45,7 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular/angular',
         '@vendor/bower/angular-resource/angular-resource',
         '@vendor/bower/angular-ui-router/release/angular-ui-router',
-        '@vendor/bower/angular-gettext/dist',
+        '@vendor/bower/angular-gettext/dist/angular-gettext',
     ];
 
     /**
