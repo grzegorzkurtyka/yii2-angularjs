@@ -4,7 +4,7 @@
   "description": "The assets bundle of Angular.js for Yii2. Managed by bower",
   "keywords": ["angular", "angularjs", "angular.js", "yii", "yii2"],
   "license": "BSD-3-Clause",
-  "version": "1.4.1",
+  "version": "1.4.1.2",
   "authors": [
     {
       "name": "Vladislav Orlov",
