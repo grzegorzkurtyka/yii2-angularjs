@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "185e3c5acec08e0cd8524521007de8a5",
+    "hash": "5811a216ab493cb321cde8514c7b06b1",
     "packages": [
         {
             "name": "bower-asset/angular",
-            "version": "v1.3.15",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular.git",
-                "reference": "ba7abcfa409ba852146e6ba206693cf7bac3e359"
+                "reference": "00565b0834478e6a5b4d8ca0373b109c9d963f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular/zipball/ba7abcfa409ba852146e6ba206693cf7bac3e359",
-                "reference": "ba7abcfa409ba852146e6ba206693cf7bac3e359",
+                "url": "https://api.github.com/repos/angular/bower-angular/zipball/00565b0834478e6a5b4d8ca0373b109c9d963f4b",
+                "reference": "00565b0834478e6a5b4d8ca0373b109c9d963f4b",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -27,21 +27,79 @@
             }
         },
         {
-            "name": "bower-asset/angular-resource",
-            "version": "v1.3.15",
+            "name": "bower-asset/angular-gettext",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/angular/bower-angular-resource.git",
-                "reference": "4cc3a759e2077f27aafb273a4a4929241aae1fd6"
+                "url": "https://github.com/rubenv/angular-gettext.git",
+                "reference": "98de89361bf8fe81d7645502610cb9e378f81e83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/4cc3a759e2077f27aafb273a4a4929241aae1fd6",
-                "reference": "4cc3a759e2077f27aafb273a4a4929241aae1fd6",
+                "url": "https://api.github.com/repos/rubenv/angular-gettext/zipball/98de89361bf8fe81d7645502610cb9e378f81e83",
+                "reference": "98de89361bf8fe81d7645502610cb9e378f81e83",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/angular": "1.3.15"
+                "bower-asset/angular": ">=1.2.0"
+            },
+            "require-dev": {
+                "bower-asset/angular-mocks": ">=1.2.0",
+                "bower-asset/jquery": ">=1.8.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "dist/angular-gettext.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "src",
+                    "node_modules",
+                    "bower_components",
+                    "test",
+                    "genplurals.py",
+                    "Gruntfile.js"
+                ]
+            }
+        },
+        {
+            "name": "bower-asset/angular-mocks",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-mocks.git",
+                "reference": "ea0a4758a98796855296d158be19730369197d33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-mocks/zipball/ea0a4758a98796855296d158be19730369197d33",
+                "reference": "ea0a4758a98796855296d158be19730369197d33",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.4.1"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./angular-mocks.js",
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/angular-resource",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angular/bower-angular-resource.git",
+                "reference": "fe96f7dd3756e8303586b51305b9eec819ee1b1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/fe96f7dd3756e8303586b51305b9eec819ee1b1a",
+                "reference": "fe96f7dd3756e8303586b51305b9eec819ee1b1a",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": "1.4.1"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -51,16 +109,16 @@
         },
         {
             "name": "bower-asset/angular-ui-router",
-            "version": "0.2.13",
+            "version": "0.2.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular-ui/ui-router.git",
-                "reference": "c3d543aae43d4600512520a0d70723ac31f2cb62"
+                "reference": "805e69bae319e922e4d3265b7ef565058aaff850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular-ui/ui-router/zipball/c3d543aae43d4600512520a0d70723ac31f2cb62",
-                "reference": "c3d543aae43d4600512520a0d70723ac31f2cb62",
+                "url": "https://api.github.com/repos/angular-ui/ui-router/zipball/805e69bae319e922e4d3265b7ef565058aaff850",
+                "reference": "805e69bae319e922e4d3265b7ef565058aaff850",
                 "shasum": ""
             },
             "require": {
@@ -85,6 +143,45 @@
                     "files.js"
                 ]
             }
+        },
+        {
+            "name": "bower-asset/nprogress",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rstacruz/nprogress.git",
+                "reference": "254266ea50c220f6507fa3f2978fc530147c7f06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rstacruz/nprogress/zipball/254266ea50c220f6507fa3f2978fc530147c7f06",
+                "reference": "254266ea50c220f6507fa3f2978fc530147c7f06",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "nprogress.js",
+                    "nprogress.css"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "node_modules",
+                    "components",
+                    "package.json",
+                    "test",
+                    "vendor"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "slim progress bar",
+            "keywords": [
+                "bar",
+                "progress",
+                "spinner"
+            ]
         }
     ],
     "packages-dev": [],

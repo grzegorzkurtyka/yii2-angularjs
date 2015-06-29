@@ -46,6 +46,7 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular-resource/angular-resource',
         '@vendor/bower/angular-ui-router/release/angular-ui-router',
         '@vendor/bower/angular-gettext/dist/angular-gettext',
+        '@vendor/bower/nprogress/nprogress',
     ];
 
     /**
@@ -54,7 +55,7 @@ class AngularAsset extends AssetBundle
     public function init()
     {
         foreach ($this->extraBundles as $extraBundle) {
-            $this->jsSources[] = 'angular-' . $extraBundle;
+            $this->jsSources[] = $extraBundle;
         }
 
         $this->publishOptions['beforeCopy'] = [$this, 'beforeCopyAssets'];
@@ -77,6 +78,9 @@ class AngularAsset extends AssetBundle
         foreach ($this->vendorFiles as $sourcePath) {
             foreach ($exts as $ext) {
                 $srcPath = Yii::getAlias($sourcePath . $ext);
+                if (!file_exists($srcPath)) {
+                    $srcPath = Yii::getAlias($sourcePath . '.js');
+                }
                 $destPath = $destDir . DIRECTORY_SEPARATOR . basename($srcPath);
                 copy($srcPath, $destPath);
             }
