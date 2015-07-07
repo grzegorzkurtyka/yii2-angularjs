@@ -47,7 +47,7 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular-ui-router/release/angular-ui-router',
         '@vendor/bower/angular-gettext/dist/angular-gettext',
         '@vendor/bower/angular-mocks/angular-mocks',
-        '@vendor/bower/ngprogress/build/',
+        '@vendor/bower/ngprogress/build/ngProgress',
     ];
 
     /**
