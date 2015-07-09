@@ -48,6 +48,8 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular-gettext/dist/angular-gettext',
         '@vendor/bower/angular-mocks/angular-mocks',
         '@vendor/bower/ngprogress/build/ngProgress',
+        '@vendor/bower/angular-sanitize/angular-sanitize',
+
     ];
 
     /**
