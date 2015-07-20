@@ -4,7 +4,7 @@
   "description": "The assets bundle of Angular.js for Yii2. Managed by bower",
   "keywords": ["angular", "angularjs", "angular.js", "yii", "yii2"],
   "license": "BSD-3-Clause",
-  "version": "1.4.2",
+  "version": "1.4.2.1",
   "authors": [
     {
       "name": "Vladislav Orlov",
@@ -27,7 +27,8 @@
     "bower-asset/angular-gettext": "~2.0",
     "bower-asset/ngprogress": "~1.0",
     "bower-asset/angular-mocks": "~1.4",
-    "bower-asset/angular-sanitize": "~1.4"
+    "bower-asset/angular-sanitize": "~1.4",
+    "bower-asset/angular-ui-bootstrap-bower": "~0.13"
   },
   "autoload": {
     "psr-4": {

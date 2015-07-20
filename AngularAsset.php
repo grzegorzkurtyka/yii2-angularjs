@@ -49,7 +49,8 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular-mocks/angular-mocks',
         '@vendor/bower/ngprogress/build/ngProgress',
         '@vendor/bower/angular-sanitize/angular-sanitize',
-
+        '@vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap',
+        '@vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap-tpls',
     ];
 
     /**
