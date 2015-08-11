@@ -39,7 +39,7 @@ class AngularAsset extends AssetBundle
         'angular-resource',
     ];
 
-    public $extraBundles = ['angular-gettext', 'angular-ui-router', 'angular-sanitize', 'ngprogress', 'ui-bootstrap-tpls'];
+    public $extraBundles = [];
 
     public $vendorFiles = [
         '@vendor/bower/angular/angular',
