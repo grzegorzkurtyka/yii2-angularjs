@@ -60,7 +60,6 @@ class AngularAsset extends AssetBundle
      */
     public function init()
     {
-        $this->locales = is_array($this->locales) ? $this->locales : [$this->locales];
         if (!empty($this->locale)) {
             $this->vendorFiles[] = '@vendor/bower/angular-i18n/angular-locale_' . $this->locale;
             $this->jsSources[] = 'angular-locale_' . $this->locale;
