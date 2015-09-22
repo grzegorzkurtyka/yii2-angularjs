@@ -40,6 +40,8 @@ class AngularAsset extends AssetBundle
     ];
 
     public $extraBundles = [];
+    
+    public $locales = [];
 
     public $vendorFiles = [
         '@vendor/bower/angular/angular',
@@ -58,6 +60,12 @@ class AngularAsset extends AssetBundle
      */
     public function init()
     {
+        $this->locales = is_array($this->locales) ? $this->locales : [$this->locales];
+        foreach ($this->locales as $locale) {
+            $this->vendorFiles[] = '@vendor/bower/angular-i18n/angular-locale_' . $locale;
+            $this->jsSources[] = 'angular-locale_'.$locale;
+        }
+
         foreach ($this->extraBundles as $extraBundle) {
             $this->jsSources[] = $extraBundle;
         }
