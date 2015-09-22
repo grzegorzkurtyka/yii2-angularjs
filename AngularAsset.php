@@ -40,8 +40,8 @@ class AngularAsset extends AssetBundle
     ];
 
     public $extraBundles = [];
-    
-    public $locales = [];
+
+    public $locale;
 
     public $vendorFiles = [
         '@vendor/bower/angular/angular',
@@ -61,9 +61,9 @@ class AngularAsset extends AssetBundle
     public function init()
     {
         $this->locales = is_array($this->locales) ? $this->locales : [$this->locales];
-        foreach ($this->locales as $locale) {
-            $this->vendorFiles[] = '@vendor/bower/angular-i18n/angular-locale_' . $locale;
-            $this->jsSources[] = 'angular-locale_'.$locale;
+        if (!empty($this->locale)) {
+            $this->vendorFiles[] = '@vendor/bower/angular-i18n/angular-locale_' . $this->locale;
+            $this->jsSources[] = 'angular-locale_' . $this->locale;
         }
 
         foreach ($this->extraBundles as $extraBundle) {
@@ -72,7 +72,7 @@ class AngularAsset extends AssetBundle
 
         $this->publishOptions['beforeCopy'] = [$this, 'beforeCopyAssets'];
         $this->js = array_map(function ($js) {
-            return YII_DEBUG ? $js . '.js' : $js . '.min.js';
+            return $js . '.js';
         }, $this->jsSources);
         parent::init();
     }
