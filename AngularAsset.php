@@ -53,6 +53,7 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular-sanitize/angular-sanitize',
         '@vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap',
         '@vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap-tpls',
+        '@vendor/bower/angular-combine/dist',
     ];
 
     /**

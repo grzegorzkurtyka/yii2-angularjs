@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59412c8c6c19dfc1332da8856a565326",
+    "hash": "64b9d6fe2e906c3a9b0007083bc6666b",
     "packages": [
         {
             "name": "bower-asset/angular",
@@ -25,6 +25,39 @@
                 "bower-asset-main": "./angular.js",
                 "bower-asset-ignore": []
             }
+        },
+        {
+            "name": "bower-asset/angular-combine",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/astik/angular-combine.git",
+                "reference": "38302a96ad0496496971bc0e2bc1ebacf42062ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/astik/angular-combine/zipball/38302a96ad0496496971bc0e2bc1ebacf42062ac",
+                "reference": "38302a96ad0496496971bc0e2bc1ebacf42062ac",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/angular": ">=1.2.0,<2.0.0"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "./dist/angular-combine.js"
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Allow loading of merge templates into a single HTML file.",
+            "keywords": [
+                "$templateCache",
+                "angular",
+                "combine",
+                "partials",
+                "performance"
+            ]
         },
         {
             "name": "bower-asset/angular-gettext",
