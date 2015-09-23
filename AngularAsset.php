@@ -53,7 +53,7 @@ class AngularAsset extends AssetBundle
         '@vendor/bower/angular-sanitize/angular-sanitize',
         '@vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap',
         '@vendor/bower/angular-ui-bootstrap-bower/ui-bootstrap-tpls',
-        '@vendor/bower/angular-combine/dist',
+        '@vendor/bower/angular-combine/dist/angular-combine',
     ];
 
     /**
@@ -61,7 +61,6 @@ class AngularAsset extends AssetBundle
      */
     public function init()
     {
-        $this->locales = is_array($this->locales) ? $this->locales : [$this->locales];
         if (!empty($this->locale)) {
             $this->vendorFiles[] = '@vendor/bower/angular-i18n/angular-locale_' . $this->locale;
             $this->jsSources[] = 'angular-locale_' . $this->locale;
